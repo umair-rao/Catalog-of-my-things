@@ -8,7 +8,7 @@ class MusicAlbum < Item
     @on_spotify = on_spotify
   end
 
-  private
+  # private
 
   def can_be_archieved?
     super && @on_spotify
