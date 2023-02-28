@@ -1,4 +1,4 @@
-source_spec.rb .require_relative '../source'
+require_relative '../source'
 require_relative '../book'
 
 describe Source do

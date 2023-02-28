@@ -1,4 +1,4 @@
-label_spec.rb require_relative '../label'
+require_relative '../label'
 
 describe Label do
   describe '#initialize' do

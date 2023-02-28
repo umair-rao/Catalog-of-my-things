@@ -1,4 +1,4 @@
-item_spec.rb. require_relative '../item'
+require_relative '../item'
 
 describe Item do
   describe '#can_be_archived?' do
