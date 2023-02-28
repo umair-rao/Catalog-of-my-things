@@ -13,6 +13,6 @@ class Game < Item
   # private
 
   def can_be_archieved?
-    super && Date.parse(@last_played_at).year < Date.today.year - 10
+    super && Date.parse(@last_played_at).year < Date.today.year - 2
   end
 end

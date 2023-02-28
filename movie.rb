@@ -8,7 +8,7 @@ class Movie < Item
     @silent = silent
   end
 
-  private
+  # private
 
   def can_be_archieved?
     super || @silent
