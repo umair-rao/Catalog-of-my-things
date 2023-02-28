@@ -11,6 +11,6 @@ class MusicAlbum < Item
   private
 
   def can_be_archieved?
-    super AND @on_spotify
+    super && @on_spotify
   end
 end

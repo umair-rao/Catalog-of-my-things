@@ -11,14 +11,11 @@ class Game < Item
 
   end
 
-  private
+  # private
 
   def can_be_archieved?
     time = Time.new
-    super AND Date.parse(@last_played_at).year < Date.today.year
+    super && Date.parse(@last_played_at).year < Date.today.year - 10
 
   end
 end
-
-g = Game.new(true, '2010/ 9 /10', 'sad', 'sdasd', 'SDASD')
-print g.last_played_at
