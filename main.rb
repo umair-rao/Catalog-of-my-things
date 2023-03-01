@@ -75,7 +75,7 @@ when 10
   source = gets.chomp
   puts "Enter the music album's genre:"
   genre = gets.chomp
-  puts "Is the album on spotify?[Y/N]:"
+  puts 'Is the album on spotify?[Y/N]:'
   on_spotify = gets.chomp
   puts "Enter the music album's publish date:"
   publish_date = gets.chomp
@@ -98,7 +98,7 @@ when 11
   source = gets.chomp
   puts "Enter the movie's genre:"
   genre = gets.chomp
-  puts "Is the movie silent?[Y/N]:"
+  puts 'Is the movie silent?[Y/N]:'
   silent = gets.chomp
   puts "Enter the movie's publish date:"
   publish_date = gets.chomp
@@ -121,7 +121,7 @@ when 12
   source = gets.chomp
   puts "Enter the game's genre:"
   genre = gets.chomp
-  puts "Is the game multiplayer?[Y/N]:"
+  puts 'Is the game multiplayer?[Y/N]:'
   multiplayer = gets.chomp
   puts "Enter the game's last played date:"
   last_played_at = gets.chomp

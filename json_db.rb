@@ -1,12 +1,12 @@
 require 'json'
 
-def save_items(item)
+def save_items(_item)
   JSON.dump(items, File.open('./storage/items.json', 'a'))
 end
 
 def load_items(items)
   json_string = JSON.parse(File.read('./storage/items.json'))
-  json_string.each do |item|
+  json_string.each do |_item|
     items << Items.new(items['publish_date'])
   end
 rescue StandardError
@@ -17,6 +17,6 @@ def save_state(app)
   save_items(app.items)
 end
 
-def load_items(app)
-  load_books(app.items)
+def load_state(app)
+  load_items(app.items)
 end

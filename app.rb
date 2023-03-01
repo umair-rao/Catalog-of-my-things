@@ -1,4 +1,3 @@
-
 class Library
   attr_accessor :items
 

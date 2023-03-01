@@ -24,8 +24,7 @@ class Movie < Item
       source: source,
       genre: genre,
       silent: @silent,
-      publish_date: @publish_date,
+      publish_date: @publish_date
     }.to_json
   end
-
 end
