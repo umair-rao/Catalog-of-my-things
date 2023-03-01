@@ -23,3 +23,20 @@ CREATE TABLE genres (
   name VARCHAR(50) NOT NULL
 );
 
+CREATE TABLE labels (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  color VARCHAR(50) NOT NULL
+);
+CREATE TABLE sources (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL
+);
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  author_id INTEGER NOT NULL,
+  genre_id INTEGER NOT NULL,
+  label_id INTEGER,
+  source_id INTEGER,
+  FOREIGN KEY (id) REFERENCES items(id)
+);
