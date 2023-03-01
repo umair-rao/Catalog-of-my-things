@@ -6,11 +6,23 @@ class Book < Item
     super(publish_date)
     @author = author
     @title = title
+    @author = author
+    @title = title
     @publisher = publisher
     @cover_state = cover_state
   end
 
   def can_be_archived?
     super() && @cover_state == 'bad' && @publish_date <= Date.today - (10 * 365)
+  end
+
+  def to_json(*_args)
+    {
+      class: self.class,
+      publisher: @publisher,
+      cover_state: @cover_state,
+      publish_date: @publish_date,
+      label: label
+    }
   end
 end
