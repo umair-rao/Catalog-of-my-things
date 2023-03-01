@@ -18,7 +18,6 @@ class MusicAlbum < Item
   def to_json(*_args)
     {
       class: self.class,
-      title: title,
       author: author,
       label: label,
       source: source,
