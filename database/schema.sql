@@ -40,3 +40,27 @@ CREATE TABLE books (
   source_id INTEGER,
   FOREIGN KEY (id) REFERENCES items(id)
 );
+CREATE TABLE music_albums (
+  id SERIAL PRIMARY KEY,
+  author_id INTEGER NOT NULL,
+  genre_id INTEGER NOT NULL,
+  label_id INTEGER,
+  source_id INTEGER,
+  FOREIGN KEY (id) REFERENCES items(id)
+);
+CREATE TABLE movies (
+  id SERIAL PRIMARY KEY,
+  author_id INTEGER NOT NULL,
+  genre_id INTEGER NOT NULL,
+  label_id INTEGER,
+  source_id INTEGER,
+  FOREIGN KEY (id) REFERENCES items(id)
+);
+CREATE TABLE games (
+  id SERIAL PRIMARY KEY,
+  author_id INTEGER NOT NULL,
+  genre_id INTEGER NOT NULL,
+  label_id INTEGER,
+  source_id INTEGER,
+  FOREIGN KEY (id) REFERENCES items(id)
+);
