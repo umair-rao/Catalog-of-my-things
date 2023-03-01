@@ -5,12 +5,10 @@ require './book'
 require_relative 'app'
 require './json_db'
 require './choices'
-
 def main
   puts 'Welcome to the Library App!'
   library = Library.new
   load_state(library)
-
   choice = Choices.new
   loop do
     choice.display_options
@@ -23,5 +21,4 @@ def main
     choice.options(option, library)
   end
 end
-
 main

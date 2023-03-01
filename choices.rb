@@ -16,7 +16,6 @@ class Choices
             11. Add a game\n
             12. Exit\n----------------------------"
   end
-
   def options(option, app)
     case option
     when 1..7
@@ -33,7 +32,6 @@ class Choices
       puts '---Invalid input---'
     end
   end
-
   def list_of_items(option, app) # rubocop:disable Metrics/CyclomaticComplexity
     case option
     when 1
@@ -52,38 +50,28 @@ class Choices
       list_of_author(app)
     end
   end
-
   def list_of_books(app)
     app.list_all_items('Book')
   end
-
   def list_of_movies(app)
     app.list_all_items('Movie')
   end
-
   def list_of_music_albums(app)
     app.list_all_items('MusicAlbum')
   end
-
   def list_of_games(app)
     app.list_all_items('Game')
   end
-
   def list_of_genre(app)
     app.list_all_genres
   end
-
   def list_of_author(app)
     app.list_all_authors
   end
-
   def list_of_label(app)
     app.list_all_labels
   end
-
   def add_item_options(item_name)
-    puts "Enter the #{item_name} title:"
-    title = gets.chomp
     puts "Enter the #{item_name} author:"
     author = gets.chomp
     puts "Enter the #{item_name} label:"
@@ -92,16 +80,14 @@ class Choices
     source = gets.chomp
     puts "Enter the #{item_name} genre:"
     genre = gets.chomp
-    [title, author, label, source, genre]
+    [author, label, source, genre]
   end
-
   def add_item_details(details, item)
-    item.author = details[1]
-    item.label = details[2]
-    item.source = details[3]
-    item.genre = details[4]
+    item.author = details[0]
+    item.label = details[1]
+    item.source = details[2]
+    item.genre = details[3]
   end
-
   def add_a_book(library)
     details = add_item_options('book\'s')
     puts "Enter the book's publisher:"
@@ -113,9 +99,8 @@ class Choices
     book = Book.new(publisher, cover_state, publish_date)
     add_item_details(details, book)
     library.add_item(book)
-    puts "#{book.title} added to the library!"
+    puts "#{book.label} added to the library!"
   end
-
   def add_a_music_album(library)
     details = add_item_options('album\'s')
     puts 'Is the album on spotify?[Y/N]:'
@@ -125,9 +110,8 @@ class Choices
     album = MusicAlbum.new(on_spotify, publish_date)
     add_item_details(details, album)
     library.add_item(album)
-    puts 'added to the library!'
+    puts "#{album.label} added to the library!"
   end
-
   def add_a_movie(library)
     details = add_item_options('movie\'s')
     puts 'Is the movie silent?[Y/N]:'
@@ -137,9 +121,8 @@ class Choices
     movie = Movie.new(silent, publish_date)
     add_item_details(details, movie)
     library.add_item(movie)
-    puts 'added to the library!'
+    puts "#{movie.label} added to the library!"
   end
-
   def add_a_game(library)
     details = add_item_options('game\'s')
     puts 'Is the game multiplayer?[Y/N]:'
@@ -151,6 +134,6 @@ class Choices
     game = Game.new(multiplayer, last_played_at, publish_date)
     add_item_details(details, game)
     library.add_item(game)
-    puts 'added to the library!'
+    puts "#{game.label} added to the library!"
   end
 end
