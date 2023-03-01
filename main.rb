@@ -1,3 +1,7 @@
+require './game'
+require './music_album'
+require './movie'
+require './book'
 require_relative 'app'
 library = Library.new
 puts 'Welcome to the Library App!'
@@ -46,7 +50,18 @@ when 9
   source = gets.chomp
   puts "Enter the book's genre:"
   genre = gets.chomp
-  book = Book.new(title, author, label, source, genre)
+  puts "Enter the book's publisher:"
+  publisher = gets.chomp
+  puts "Enter the book's publish_date:"
+  publish_date = gets.chomp
+  puts "Enter the book's cover_state:"
+  cover_state = gets.chomp
+  book = Book.new(publisher, cover_state, publish_date)
+  book.title = title
+  book.author = author
+  book.label = label
+  book.source = source
+  book.genre = genre
   library.add_item(book)
   puts "#{book.title} added to the library!"
 when 10
@@ -60,7 +75,16 @@ when 10
   source = gets.chomp
   puts "Enter the music album's genre:"
   genre = gets.chomp
-  album = MusicAlbum.new(title, artist, label, source, genre)
+  puts "Is the album on spotify?[Y/N]:"
+  on_spotify = gets.chomp
+  puts "Enter the music album's publish date:"
+  publish_date = gets.chomp
+  album = MusicAlbum.new(on_spotify, publish_date)
+  album.title = title
+  album.author = artist
+  album.label = label
+  album.source = source
+  album.genre = genre
   library.add_item(album)
   puts "#{album.title} added to the library!"
 when 11
@@ -74,7 +98,16 @@ when 11
   source = gets.chomp
   puts "Enter the movie's genre:"
   genre = gets.chomp
-  movie = Movie.new(title, director, label, source, genre)
+  puts "Is the movie silent?[Y/N]:"
+  silent = gets.chomp
+  puts "Enter the movie's publish date:"
+  publish_date = gets.chomp
+  movie = Movie.new(silent, publish_date)
+  movie.title = title
+  movie.author = director
+  movie.label = label
+  movie.source = source
+  movie.genre = genre
   library.add_item(movie)
   puts "#{movie.title} added to the library!"
 when 12
@@ -88,7 +121,18 @@ when 12
   source = gets.chomp
   puts "Enter the game's genre:"
   genre = gets.chomp
-  game = Game.new(title, publisher, platform, source, genre)
+  puts "Is the game multiplayer?[Y/N]:"
+  multiplayer = gets.chomp
+  puts "Enter the game's last played date:"
+  last_played_at = gets.chomp
+  puts "Enter the game's publish date:"
+  publish_date = gets.chomp
+  game = Game.new(multiplayer, last_played_at, publish_date)
+  game.title = title
+  game.author = publisher
+  game.label = platform
+  game.source = source
+  game.genre = genre
   library.add_item(game)
   puts "#{game.title} added to the library!"
 when 13
