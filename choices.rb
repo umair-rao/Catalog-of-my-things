@@ -19,6 +19,23 @@ class Choices
 
   def options(option, app)
     case option
+    when 1..7
+      list_of_items(option,app)
+    when 8
+      add_a_book(app)
+    when 9
+      add_a_music_album(app)
+    when 10
+      add_a_movie(app)
+    when 11
+      add_a_game(app)
+    else
+      puts '---Invalid input---'
+    end
+  end
+
+  def list_of_items(option,app)
+    case option
     when 1
       list_of_books(app)
     when 2
@@ -33,17 +50,6 @@ class Choices
       list_of_label(app)
     when 7
       list_of_author(app)
-    when 8
-      add_a_book(app)
-    when 9
-      add_a_music_album(app)
-    when 10
-      add_a_movie(app)
-    when 11
-      add_a_game(app)
-    else
-      puts '---Invalid input---'
-    end
   end
 
   def list_of_books(app)
