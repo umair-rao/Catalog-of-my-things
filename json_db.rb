@@ -28,7 +28,6 @@ def load_items(items)
       music_album.genre = item['genre']
       items << music_album
     end
-    items 
   end
 rescue StandardError
   print 'no items were saved'
