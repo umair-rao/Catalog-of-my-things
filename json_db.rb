@@ -1,12 +1,11 @@
 require 'json'
-
-def save_items(_item)
-  JSON.dump(items, File.open('./storage/items.json', 'a'))
+def save_items(items)
+  JSON.dump(items, File.open('./storage/items.json', 'w'))
 end
 
 def load_items(items)
   json_string = JSON.parse(File.read('./storage/items.json'))
-  json_string.each do |item|
+  items = json_string.each do |item|
     case item['class']
     when 'Book'
       book = Book.new(item['publisher'], item['cover_state'], item['publish_date'])
@@ -29,6 +28,7 @@ def load_items(items)
       music_album.genre = item['genre']
       items << music_album
     end
+    items 
   end
 rescue StandardError
   print 'no items were saved'

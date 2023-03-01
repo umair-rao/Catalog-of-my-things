@@ -3,7 +3,11 @@ require './music_album'
 require './movie'
 require './book'
 require_relative 'app'
+require './json_db'
+
+
 library = Library.new
+load_state(library)
 puts 'Welcome to the Library App!'
 puts
 puts 'Please choose an option:'
@@ -63,6 +67,7 @@ when 9
   book.source = source
   book.genre = genre
   library.add_item(book)
+  save_state(library)
   puts "#{book.title} added to the library!"
 when 10
   puts "Enter the music album's title:"
@@ -86,6 +91,7 @@ when 10
   album.source = source
   album.genre = genre
   library.add_item(album)
+  save_state(library)
   puts "#{album.title} added to the library!"
 when 11
   puts "Enter the movie's title:"
@@ -109,6 +115,7 @@ when 11
   movie.source = source
   movie.genre = genre
   library.add_item(movie)
+  save_state(library)
   puts "#{movie.title} added to the library!"
 when 12
   puts "Enter the game's title:"
@@ -134,6 +141,7 @@ when 12
   game.source = source
   game.genre = genre
   library.add_item(game)
+  save_state(library)
   puts "#{game.title} added to the library!"
 when 13
   puts 'Goodbye!'
