@@ -20,7 +20,7 @@ class Choices
   def options(option, app)
     case option
     when 1..7
-      list_of_items(option,app)
+      list_of_items(option, app)
     when 8
       add_a_book(app)
     when 9
@@ -34,7 +34,7 @@ class Choices
     end
   end
 
-  def list_of_items(option,app)
+  def list_of_items(option, app) # rubocop:disable Metrics/CyclomaticComplexity
     case option
     when 1
       list_of_books(app)
@@ -50,6 +50,7 @@ class Choices
       list_of_label(app)
     when 7
       list_of_author(app)
+    end
   end
 
   def list_of_books(app)
