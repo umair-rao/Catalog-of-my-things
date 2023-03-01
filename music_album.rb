@@ -26,4 +26,5 @@ class MusicAlbum < Item
       on_spotify: @on_spotify,
       publish_date: @publish_date
     }.to_json
+  end
 end
