@@ -1,15 +1,13 @@
 require_relative './item'
 class Book < Item
-  attr_accessor :publisher, :cover_state, :publish_date, :author, :title
+  attr_accessor :publisher, :cover_state
+  attr_reader :title
 
-  def initialize(publisher, cover_state, publish_date, author, title)
+  def initialize(publisher, cover_state, publish_date)
     super(publish_date)
-    @author = author
-    @title = title
-    @author = author
-    @title = title
     @publisher = publisher
     @cover_state = cover_state
+    @title = ''
   end
 
   def can_be_archived?
@@ -19,6 +17,8 @@ class Book < Item
   def to_json(*_args)
     {
       class: self.class,
+      title: @title,
+      author: @author,
       publisher: @publisher,
       cover_state: @cover_state,
       publish_date: @publish_date,
