@@ -82,8 +82,6 @@ class Choices
   end
 
   def add_item_options(item_name)
-    puts "Enter the #{item_name} title:"
-    title = gets.chomp
     puts "Enter the #{item_name} author:"
     author = gets.chomp
     puts "Enter the #{item_name} label:"
@@ -92,14 +90,14 @@ class Choices
     source = gets.chomp
     puts "Enter the #{item_name} genre:"
     genre = gets.chomp
-    [title, author, label, source, genre]
+    [author, label, source, genre]
   end
 
   def add_item_details(details, item)
-    item.author = details[1]
-    item.label = details[2]
-    item.source = details[3]
-    item.genre = details[4]
+    item.author = details[0]
+    item.label = details[1]
+    item.source = details[2]
+    item.genre = details[3]
   end
 
   def add_a_book(library)
@@ -113,7 +111,7 @@ class Choices
     book = Book.new(publisher, cover_state, publish_date)
     add_item_details(details, book)
     library.add_item(book)
-    puts "#{book.title} added to the library!"
+    puts "#{book.label} added to the library!"
   end
 
   def add_a_music_album(library)
@@ -125,7 +123,7 @@ class Choices
     album = MusicAlbum.new(on_spotify, publish_date)
     add_item_details(details, album)
     library.add_item(album)
-    puts 'added to the library!'
+    puts "#{album.label} added to the library!"
   end
 
   def add_a_movie(library)
@@ -137,7 +135,7 @@ class Choices
     movie = Movie.new(silent, publish_date)
     add_item_details(details, movie)
     library.add_item(movie)
-    puts 'added to the library!'
+    puts "#{movie.label} added to the library!"
   end
 
   def add_a_game(library)
@@ -151,6 +149,6 @@ class Choices
     game = Game.new(multiplayer, last_played_at, publish_date)
     add_item_details(details, game)
     library.add_item(game)
-    puts 'added to the library!'
+    puts "#{game.label} added to the library!"
   end
 end

@@ -11,8 +11,9 @@ class Library
 
   def list_all_items(type)
     puts "Listing all #{type}:"
+    puts @items
     @items.each do |item|
-      puts "- #{item.title}" if item.class.to_s == type
+      puts "- #{item.author}" if item.class.to_s == type
     end
   end
 

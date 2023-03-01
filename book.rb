@@ -18,11 +18,11 @@ class Book < Item
     {
       class: self.class,
       title: @title,
-      author: @author,
+      author: author,
       publisher: @publisher,
       cover_state: @cover_state,
       publish_date: @publish_date,
       label: label
-    }
+    }.to_json
   end
 end
