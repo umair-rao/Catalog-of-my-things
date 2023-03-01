@@ -1,3 +1,5 @@
+require_relative './item'
+
 class Label
   attr_accessor :title, :color, :items
   attr_reader :id
@@ -7,9 +9,10 @@ class Label
     @title = title
     @color = color
     @items = []
-    def add_item(item)
-      @items << item
-      item.label = title
-    end
+  end
+
+  def add_item(item)
+    @items << item
+    item.label = title
   end
 end
