@@ -1,27 +1,3 @@
-class LibraryItem
-  attr_accessor :title, :author, :label, :source, :genre
-
-  def initialize(title, author, label, source, genre)
-    @title = title
-    @author = author
-    @label = label
-    @source = source
-    @genre = genre
-  end
-end
-
-class Book < LibraryItem
-end
-
-class MusicAlbum < LibraryItem
-end
-
-class Movie < LibraryItem
-end
-
-class Game < LibraryItem
-end
-
 class Library
   attr_accessor :items
 
