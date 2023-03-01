@@ -96,7 +96,6 @@ class Choices
   end
 
   def add_item_details(details, item)
-    item.title = details[0]
     item.author = details[1]
     item.label = details[2]
     item.source = details[3]
@@ -126,7 +125,7 @@ class Choices
     album = MusicAlbum.new(on_spotify, publish_date)
     add_item_details(details, album)
     library.add_item(album)
-    puts "#{album.title} added to the library!"
+    puts 'added to the library!'
   end
 
   def add_a_movie(library)
@@ -138,11 +137,11 @@ class Choices
     movie = Movie.new(silent, publish_date)
     add_item_details(details, movie)
     library.add_item(movie)
-    puts "#{movie.title} added to the library!"
+    puts 'added to the library!'
   end
 
   def add_a_game(library)
-    details = add_item_options
+    details = add_item_options('game\'s')
     puts 'Is the game multiplayer?[Y/N]:'
     multiplayer = gets.chomp
     puts "Enter the game's last played date:"
@@ -152,6 +151,6 @@ class Choices
     game = Game.new(multiplayer, last_played_at, publish_date)
     add_item_details(details, game)
     library.add_item(game)
-    puts "#{game.title} added to the library!"
+    puts 'added to the library!'
   end
 end

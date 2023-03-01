@@ -20,7 +20,7 @@ class Library
     puts 'Listing all genres:'
     genres = []
     @items.each do |item|
-      genres << item.genre unless genres.include?(item.genre)
+      genres << item.genre if item.respond_to?(:genre) && !genres.include?(item.genre)
     end
     genres.each { |genre| puts "- #{genre}" }
   end
@@ -29,7 +29,7 @@ class Library
     puts 'Listing all labels:'
     labels = []
     @items.each do |item|
-      labels << item.label unless labels.include?(item.label)
+      labels << item.label if item.respond_to?(:label) && !labels.include?(item.label)
     end
     labels.each { |label| puts "- #{label}" }
   end
@@ -38,7 +38,7 @@ class Library
     puts 'Listing all authors:'
     authors = []
     @items.each do |item|
-      authors << item.author unless authors.include?(item.author)
+      authors << item.author if item.respond_to?(:author) && !authors.include?(item.author)
     end
     authors.each { |author| puts "- #{author}" }
   end
@@ -47,7 +47,7 @@ class Library
     puts 'Listing all sources:'
     sources = []
     @items.each do |item|
-      sources << item.source unless sources.include?(item.source)
+      sources << item.source if item.respond_to?(:source) && !sources.include?(item.source)
     end
     sources.each { |source| puts "- #{source}" }
   end
