@@ -50,7 +50,7 @@
 
 [kanban board](https://github.com/umair-rao/Catalog-of-my-things/projects/1)
 
-[Video Link](https://drive.google.com/file/d/1veDT8GeSHtqxYzKgDmTSVKS3-MKhp1ro/view?usp=sharing)
+[Video Link](https://youtu.be/qzNaWDkbKkk)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
