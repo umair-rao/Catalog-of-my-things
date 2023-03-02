@@ -12,6 +12,8 @@ def load_items(items)
   json_string.each do |item|
     json_cases(item, items)
   end
+rescue StandardError
+  print 'no items were saved'
 end
 
 def json_cases(item, items) # rubocop:disable Metrics/AbcSize
