@@ -42,8 +42,6 @@
 - **[List all your data when the option is selected]**
 - **[List all your data when the option is selected]**
 
-### Live Demo <a name="live-demo"><a/>
-
 ### Video <a name="video"><a/>
 
 [kanban board](https://github.com/umair-rao/Catalog-of-my-things/projects/1)
