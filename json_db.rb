@@ -5,21 +5,19 @@ require './movie'
 require './game'
 
 def save_books(items)
-    JSON.dump(items, File.open('./storage/books.json', 'w'))
+  JSON.dump(items, File.open('./storage/books.json', 'w'))
 end
 
 def save_movies(items)
-
-    JSON.dump(items, File.open('./storage/movies.json', 'w'))
+  JSON.dump(items, File.open('./storage/movies.json', 'w'))
 end
 
 def save_music_albums(items)
-    JSON.dump(items, File.open('./storage/music_albums.json', 'w'))
+  JSON.dump(items, File.open('./storage/music_albums.json', 'w'))
 end
 
 def save_games(items)
-
-    JSON.dump(items, File.open('./storage/games.json', 'w'))
+  JSON.dump(items, File.open('./storage/games.json', 'w'))
 end
 
 def load_books(items)
@@ -84,10 +82,10 @@ def save_state(app)
   music_album = []
   game = []
   app.items.each do |item|
-   book << item if item.class.to_s == 'Book'
-   movie << item if item.class.to_s == 'Movie'
-   music_album << item if item.class.to_s == 'MusicAlbum'
-   game << item if item.class.to_s == 'Game'
+    book << item if item.class.to_s == 'Book'
+    movie << item if item.class.to_s == 'Movie'
+    music_album << item if item.class.to_s == 'MusicAlbum'
+    game << item if item.class.to_s == 'Game'
   end
   save_books(book)
   save_games(game)
