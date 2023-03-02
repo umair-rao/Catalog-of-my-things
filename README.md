@@ -44,8 +44,6 @@
 
 ### Live Demo <a name="live-demo"><a/>
 
-[Live Demo Link]() is currently not available :exclamation: 
-
 ### Video <a name="video"><a/>
 
 [kanban board](https://github.com/umair-rao/Catalog-of-my-things/projects/1)
