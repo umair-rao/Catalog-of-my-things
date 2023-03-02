@@ -68,7 +68,7 @@ Terminal
 
 Clone this repository to your desired folder:
 
-cd [your-folder] https://github.com/umair-rao/Catalog-of-my-things.git
+git clone https://github.com/umair-rao/Catalog-of-my-things.git [my-folder]
 cd my-folder
 
 Test
