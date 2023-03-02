@@ -44,11 +44,13 @@
 
 ### Live Demo <a name="live-demo"><a/>
 
-[Live Demo Link]()
+[Live Demo Link]() is currently not available :exclamation: 
 
 ### Video <a name="video"><a/>
 
-[Video Link]()
+[kanban board](https://github.com/umair-rao/Catalog-of-my-things/projects/1)
+
+[Video Link](https://drive.google.com/file/d/1veDT8GeSHtqxYzKgDmTSVKS3-MKhp1ro/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
