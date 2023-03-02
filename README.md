@@ -107,9 +107,9 @@ rubocop
 
 👤 **Ayesha Arshad**
 
-- GitHub: [@githubhandle](https://github.com/shella12)
-- Twitter: [@twitterhandle](https://twitter.com/AyeshaA03712974)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
+- GitHub: [@shella12](https://github.com/shella12)
+- Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
+- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
