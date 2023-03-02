@@ -109,7 +109,7 @@ rubocop
 
 - GitHub: [@shella12](https://github.com/shella12)
 - Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
-- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad/)
+- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/-ayesha-arshad/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
