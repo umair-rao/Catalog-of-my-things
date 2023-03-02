@@ -10,16 +10,17 @@ class Choices
             5. List all genres (e.g Comedy)\n
             6. List all labels (e.g. Gift, New)\n
             7. List all authors (e.g. Stephen King)\n
-            8. Add a book\n
-            9. Add a music album\n
-            10. Add a movie\n
-            11. Add a game\n
-            12. Exit\n----------------------------"
+            8. List all sources\n
+            9. Add a book\n
+            10. Add a music album\n
+            11. Add a movie\n
+            12. Add a game\n
+            13. Exit\n----------------------------"
   end
 
   def options(option, app)
     case option
-    when 1..7
+    when 1..8
       list_of_items(option, app)
     when 8
       add_a_book(app)
@@ -50,6 +51,8 @@ class Choices
       list_of_label(app)
     when 7
       list_of_author(app)
+    when 8
+      list_all_sources(app)
     end
   end
 

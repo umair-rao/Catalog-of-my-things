@@ -23,6 +23,11 @@ class Item
     author.items << self
   end
 
+  def add_source(source)
+    @source = source
+    source.items << self
+  end
+
   def can_be_archived?
     @publish_date < (Date.today - (10 * 365))
   end
