@@ -13,7 +13,7 @@ def main
   loop do
     choice.display_options
     option = gets.chomp.to_i
-    if option == 12
+    if option == 13
       save_state(library)
       puts 'Thanks for visiting!!!!'
       exit
